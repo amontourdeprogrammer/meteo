@@ -5,8 +5,12 @@ var url = "http://www.infoclimat.fr/public-api/gfs/json?_ll=48.85341,2.3488&_aut
 	
 
 request(url, function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred 
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
-  console.log('body:', JSON.parse(body).request_state); // Print the HTML for the Google homepage. 
-  console.log('temperature:', JSON.parse(body)["2017-04-18 11:00:00"]["temperature"]["2m"]);
+	var temp = JSON.parse(body)["2017-04-18 11:00:00"]["temperature"]["2m"]
+	var ok = "ok";
+  	console.log('temperature:', temp);
+
+  	if (temp<282) {
+  		console.log(ok);
+  	};
+
 });
