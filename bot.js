@@ -1,10 +1,10 @@
-
+require('dotenv').config()
 // Dependencies =========================
 var
     config = require('./config');
     Bonjour = require('./bonjour');
     Retweet = require('./retweet');
-
+    twit = require('twit');
 
 var Twitter = new twit(config);
 

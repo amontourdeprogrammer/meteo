@@ -5,9 +5,11 @@
  * access_token
  * access_token_secret
  */
+
+
 module.exports = {
-  consumer_key: 'PRtn3paE60ejaCYQTcAbDJU1E',  
-  consumer_secret: '7Zi1kiDBOMqfsn6EMtZgi3h9CXIiXwpU7vvhtCqKbg3l9XYyGI',
-  access_token: '846372191876911105-uNSeXlEU0QTC5LknTc9kp6UHqOmsFdO',  
-  access_token_secret: 'EtYqjyXMWanAr7JFwdfHrATnd1aUteF1wvEzWpIg295Ci'
+  consumer_key: process.env.CONSUMER_KEY,  
+  consumer_secret: process.env.CONSUMER_SECRET,
+  access_token: process.env.ACCESS_TOKEN,  
+  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 }
