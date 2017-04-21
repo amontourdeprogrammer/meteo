@@ -1,11 +1,9 @@
 
 // Dependencies =========================
 var
-    twit = require('twit'),
     config = require('./config');
-    meteo = require('./meteo');
-    Bonjour = function(){require('./bonjour')};
-    Retweet = function(){require('./retweet')};
+    Bonjour = require('./bonjour');
+    Retweet = require('./retweet');
 
 
 var Twitter = new twit(config);
